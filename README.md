@@ -12,8 +12,6 @@ Die Ergebnisse zeigen eine Reihe von Artefakten, die zu CT-Scans führen, die vo
 
 Nach der Erläuterung der grundlegenden Konzepte, die für das Thema relevant sind, befasst sich diese Arbeit mit der Einführung und Umsetzung der **Bi-Level-Optimierung** in das Dictionary-Learning sowie mit **KSVD-Model und orthogonal Matching Pursuit**. Die Algorithmen wurden auf verschiedene Beispiele angewandt, und die Ergebnisse dieser Auswertungen ergaben, dass die Algorithmen die angestrebten Ziele weitgehend erreichten, insbesondere bei den Beispielen, bei denen die Hauptanwendung nicht in der Lage war, realistische Bilder in dem Teil der Scans zu liefern.
 
-Trotz der erfolgreichen Algorithmen haben die Bewertungen auch bestimmte Einschränkungen des Systems aufgezeigt. Diese Einschränkungen werden in den entsprechenden Abschnitten erläutert, zusammen mit möglichen Lösungen und Vorschlägen für die künftige Weiterentwicklung.
-
 # Abstract (English):
 
 The most significant challenge in the field of medicine is providing accurate images of human inner organs to aid in the diagnosis of a diverse range of diseases and health conditions, and potentially to assist in the development of more effective therapy strategies for patients. Despite the fact that Computed Tomography is one of the most well-known tools for recognizing and analyzing a range of medical illnesses and disorders, there are reasons that prevent Computed Tomography from being extremely accurate. The reason lies in the health risks involved in the dangers posed by the use of ionizing X-rays.
@@ -23,9 +21,6 @@ The most significant challenge in the field of medicine is providing accurate im
 Among the results, there are a number of artifacts that lead to CT scans that differ from reality. The main goal of this thesis is to improve these images and make them more realistic by applying Dictionary Learning. For this purpose, two different and fast algorithms from the context of sparse coding or more specifically dictionary learning are introduced to achieve an improvement of the final result.
 
 After explaining the basic concepts relevant to the topic, this work focuses on the introduction and implementation of **Bi-level optimization** into dictionary learning and the **KSVD model and Orthogonal Matching Pursuit**. These algorithms are tightly integrated with the primary model so that the images are effectively denoised during reconstruction. This integration results in CT scans that are more realistic and authentic. The algorithms were applied to different samples, and the results of these evaluations showed that the algorithms largely achieved the intended goals, with particular reference to the samples where the main application was not able to provide realistic images in the part of the scans where the nodules are located or have an unrealistic appearance.
-
-Despite the achievements of the algorithms, the evaluations have also pointed out certain limitations of the system. These limitations are explained in the dedicated sections, along with possible solutions and suggestions for future development.
-
 
 
 ## Get Started
