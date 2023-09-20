@@ -22,7 +22,7 @@ class Dictupdate(torch.nn.Module):
         self.dictionary.data = torch.nn.functional.normalize(self.dictionary.data, p=2.0, dim=1, eps=1e-10)
         return torch.mm(self.dictionary.cuda().T, x.cuda()).to(torch.float32)
     
-    def fit(self, sv, patch, optimizer, epoch_num_D, cond = False):
+    def fit(self, sv, patch, optimizer, epoch_num_D):
         """
         Optimize the objective function
          ---------------

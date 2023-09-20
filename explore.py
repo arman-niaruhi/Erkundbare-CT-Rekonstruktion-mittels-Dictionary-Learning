@@ -273,7 +273,6 @@ class Optim:
         mean_loss = []
         mean_loss_prev = 1e9
         stopiter = epochs
-        cond = False
         Dict_err = 1e9
         
         def cropping(xt, loc, size_of_crop):
@@ -366,7 +365,7 @@ class Optim:
             # patchify the image
             patch_ = patchify_the_image(xt2, patchsize=patchsize)
             # optimie the dictianry
-            Net.fit(patch=[patch_], sv=sp_Net.sv, optimizer=optimizer_dict, epoch_num_D=epochs_Dict, cond=cond)
+            Net.fit(patch=[patch_], sv=sp_Net.sv, optimizer=optimizer_dict, epoch_num_D=epochs_Dict)
             iter_next = True
             for i in range(epochs_SP):
                 optim.zero_grad()
@@ -411,9 +410,7 @@ class Optim:
 
                 with torch.no_grad():
                     mean_loss.append(loss.item())
-                    if len(mean_loss) > 200:
-                        cond = True
-
+                    
                     if Net.error > Dict_err:
                         optimizer_dict.param_groups[0]['lr'] = optimizer_dict.param_groups[0]['lr'] * 0.9
                     Dict_err = Net.error
