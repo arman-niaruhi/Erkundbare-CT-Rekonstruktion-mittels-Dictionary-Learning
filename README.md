@@ -27,6 +27,8 @@ Nach der Erläuterung der grundlegenden Konzepte, die für das Thema relevant si
 
 - **Dependencies** 
   - install PyTorch (e.g. version 1.12.1+cu116) and Torchvision (e.g. version0.13.1+cu116)
+  - install NumPy
+  - install SciPy 
   - pip install -U scikit-learn
   - install requirements by: `pip install -r requirements`
   - install https://github.com/drgHannah/Radon-Transformation
