@@ -8,8 +8,7 @@ class Sparse_net(torch.nn.Module):
         num_patches : assigned to the number of patches to construct the Sparse representation matrix    
     '''
     def __init__(self, number_of_atoms, num_patches):
-        super(Sparse_net, self).__init__()
-        
+        super(Sparse_net, self).__init__() 
         self.number_of_atoms = number_of_atoms
         self.sv = torch.rand(self.number_of_atoms, num_patches)
         
