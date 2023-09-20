@@ -1,7 +1,5 @@
 import torch
 from DL.KSVD_MODEL.KSVD_model import ApproximateKSVD
-import time
-
 
 class Dictionary_Learning():
     '''
