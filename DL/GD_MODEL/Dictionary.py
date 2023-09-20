@@ -23,6 +23,15 @@ class Dictupdate(torch.nn.Module):
         return torch.mm(self.dictionary.cuda().T, x.cuda()).to(torch.float32)
     
     def fit(self, sv, patch, optimizer, epoch_num_D, cond = False):
+        """
+        Optimize the objective function
+         ---------------
+        Parameter:
+            sv : current Sparse representation
+            patch : input patchified input image
+            optimizer : optimizer to optimize the object fuction
+            epoch_num_D : the number of iteration for optimization
+        """
         for _ in range(epoch_num_D):
             for p in patch:    
                 predict = self.forward(sv)
