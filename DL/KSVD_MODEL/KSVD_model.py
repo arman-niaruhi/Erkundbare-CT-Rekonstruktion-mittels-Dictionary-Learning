@@ -3,8 +3,6 @@ import numpy as np
 from sklearn.linear_model import orthogonal_mp
 import torch
 
-
-
 class ApproximateKSVD(object):
     def __init__(self, number_atoms, patchsize, tol=1e-3,
                  transform_n_nonzero_coefs=None, device="cuda"):
@@ -128,12 +126,12 @@ class ApproximateKSVD(object):
 
     def fit(self, X):
         """
+        Here the image would be reconstructed using the given X and computed Dictionary
+        ----------
         Parameters
         ----------
         X: 
             shape = [n_samples, n_features]
-        ----------
-        Here the image would be reconstructed using the given X and computed Dictionary
         """
         for x in X:
             torch.cuda.empty_cache()
