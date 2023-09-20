@@ -55,7 +55,7 @@ class ApproximateKSVD(object):
     def _update_dict(self, X, D, y):
         """
         This function is provided to update the dictionary. 
-        
+        ----------
         Parameters
         ----------
         X:
@@ -93,7 +93,7 @@ class ApproximateKSVD(object):
 
     def _transform(self, D, X):
         """
-        In this function the Orthogonal Matching Pursuit (OMP) is used to solve the objective function X = DY 
+        In this function, the Orthogonal Matching Pursuit (OMP) is used to solve the objective function X = DY 
         ----------
         Parameters
         ----------
@@ -169,13 +169,13 @@ class ApproximateKSVD(object):
     # Patchify the image to the patches
     def patchify_the_image(self, image, patchsize=12):
         """
-        patchifying the image using folding and unfolding
+        Patchifying the image using folding and unfolding
         ----------
         Parameters:
             image: original input image
         ----------
         return:
-            all of the patches and assined mean and standard deviation
+            all of the patches and assigned mean and standard deviation
         """
         # Extract patches from the image
         patches = torch.nn.functional.unfold(
