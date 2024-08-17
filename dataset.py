@@ -162,6 +162,3 @@ def prepare_data(angles, patients=range(1,300), device='cpu'):
 if __name__ == '__main__':
     # prepare data for 100 angles 
     prepare_data(100,range(1,300),True)
-
-    # print(os.path.relpath("data/vsa_hannah/LIDC/LIDC-IDRI", "/home/niaruhi/.bash_history"))
-    # print(os.path.abspath('../../../data/vsa_hannah/LIDC/LIDC-IDRI'))
